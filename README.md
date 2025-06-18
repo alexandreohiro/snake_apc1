@@ -36,17 +36,17 @@ sudo yum install gcc
 
 #### Windows (MinGW/GCC):
 ```bash
-gcc -o snake_game snake_game_completo.c
+gcc snake3.c -lm -o a.out
 ```
 
 #### Windows (Visual Studio):
 ```bash
-cl snake_game_completo.c /Fe:snake_game.exe
+cl snake3.c /Fe:snake3.exe
 ```
 
 #### Linux/wsl:
 ```bash
-gcc -o snake_game snake_game_completo.c
+gcc -o snake3 snake3.c
 ```
 
 ### ▶️ Execução
@@ -134,7 +134,7 @@ snake_game
 
 ### 🥇 Ranking Persistente
 
-O jogo salva automaticamente os **Top 100** melhores scores no arquivo `snake_ranking.dat`:
+O jogo salva automaticamente os **Top 5** melhores scores no arquivo `snake_ranking.dat`:
 - 💾 **Persistência**: Scores salvos entre sessões
 - 🏅 **Top Players**: Visualize os melhores jogadores
 - 📝 **Nome Personalizado**: Cada jogador pode inserir seu nome
@@ -248,7 +248,7 @@ snake-game/
 ```bash
 # Problema: Algumas funções Windows não existem
 # Solução: O código já tem compatibilidade com #ifdef
-gcc -o snake_game snake_game_completo.c
+gcc snake3.c -lm -o a.out
 ```
 
 #### **Jogo Muito Rápido/Lento**
@@ -264,7 +264,6 @@ int velocidade = 150;  // Aumente para mais lento, diminua para mais rápido
 # Linux: chmod 755 ./
 ```
 
-## 🎓 Aspectos Educacionais
 
 ### 📚 **Conceitos Demonstrados**
 
@@ -291,15 +290,6 @@ int velocidade = 150;  // Aumente para mais lento, diminua para mais rápido
    - Manipulação de console
    - Entrada não-bloqueante
    - Compatibilidade multiplataforma
-
-## 🤝 Contribuições
-
-### 🛠️ **Como Contribuir**
-
-1. **🍴 Fork** o projeto
-2. **🌿 Crie** uma branch para sua feature
-3. **💻 Implemente** suas melhorias
-4. **✅ Teste** em Windows e Linux
 
 ### 💡 **Ideias para Melhorias**
 
